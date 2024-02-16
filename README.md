@@ -1,7 +1,7 @@
 Sick Plant Recognition
 ==============================
 
-A short description of the project.
+Identify if the plant in a picture is sick or healthy.
 
 Project Organization
 ------------
@@ -32,6 +32,26 @@ Project Organization
     │                         generated with `pip freeze > requirements.txt`
     │
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
+    |
+    ├── drivers                <- Source code for use in this project.
+    │   ├── __init__.py    <- Makes src a Python module
+    │   │
+    │   ├── crawlers           <- Crawling classes for different sources
+    │   │   ├── __init__.py
+    │   │   └── crawler.py
+    │   │
+    │   ├── processors           <- Processors for different purposes
+    │   │   ├── __init__.py
+    │   │   └── processor.py
+    │   │
+    │   ├── dataloaders       <- Dataloaders for different tasks
+    │   │   ├── __init__.py
+    │   │   └── dataloader.py
+    │   │
+    │   └── datasets         <- Classes for different datasets
+    │       ├── __init__.py
+    │       └── predict_model.py
+    |
     ├── src                <- Source code for use in this project.
     │   ├── __init__.py    <- Makes src a Python module
     │   │
@@ -41,8 +61,7 @@ Project Organization
     │   ├── features       <- Scripts to turn raw data into features for modeling
     │   │   └── build_features.py
     │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
+    │   ├── models         <- Scripts to train models and make predictions
     │   │   ├── predict_model.py
     │   │   └── train_model.py
     │   │
@@ -51,7 +70,4 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 
-
 --------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
